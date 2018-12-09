@@ -42,6 +42,7 @@ html {
               border-radius: 3px;
               }
 
+    
 
 
         .slider {
@@ -72,4 +73,17 @@ html {
     border-radius: 50%;
     background: rgb(37, 36, 90);
     cursor: pointer;
+}
+
+.marge {
+    margin-bottom:0px;
+    margin-left:60px;
+    margin-top:0px;
+    }
+
+video{
+    margin-bottom:0px;
+    margin-left:20%;
+    margin-top:0px;
+    padding-bottom: 0px; 
 }

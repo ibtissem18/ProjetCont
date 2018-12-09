@@ -1,7 +1,10 @@
 var express = require("express");
 var arDrone = require('ar-drone');
-
+var ffmpeg = require('ffmpeg');
+require("./drone/camera-feed")
 var app = express();
+
+ //require("dronestream").listen(3001);
 
 app.use(express.static('public'))
 
@@ -9,6 +12,11 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 
 var client = arDrone.createClient();
+
+client.on('error', console.log)
+ .on('data', function(frame) {
+     socket.emit('image', { image: frame });
+});
 
 app.set('view engine', 'ejs');
 

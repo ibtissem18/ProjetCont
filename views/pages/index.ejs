@@ -5,16 +5,30 @@
     <meta charset="utf-8"/>
     <title></title>
     <link rel="stylesheet" href="/semantic/st.css" type="text/css" /> 
+    <script src="nodecopter-client.js"></script>
+    <script src="socket.io.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <script>
+            $(function () {
+                function startArDRoneStream() {
+                    new NodecopterStream(document.getElementById("placeholder"), {port: 3001});
+                }
+                
+                
+
+                startArDRoneStream();
+                
+            })
+        </script>
 </head>
 <body>
-
+    
     <form action="/takeoff" method="post">
-	<p align="center"> <font face=Geneva color="dodgerblue"><B> Drone Pilot </B></font></p>
+	    <p align="center"> <font face=Geneva color="dodgerblue"><B> Drone Pilot </B></font></p>
         <input align="center" color="dodgerblue" type="submit" value="TAKEOFF" />
     </form>
-
-    <video controls style="position:absolute" width="500" height="300" autoplayn>
-    </video>
+        <div id="placeholder"></div>
+            <video id="live" width="640" height="360" autoplay></video>
 
     <form action="/land" method="post">
         <input align="center" face=Geneva type="submit" value="LAND" />

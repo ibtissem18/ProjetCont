@@ -17,18 +17,16 @@
                 
 
                 startArDRoneStream();
-                
             })
         </script>
 </head>
 <body>
-    
+    <form>
+        <!--<p align="center">--><div align="center"> <font face=Geneva color="dodgerblue"><B> Drone Pilot </B></font><!--</p>--> </div>
+    </form>
     <form action="/takeoff" method="post">
-	    <p align="center"> <font face=Geneva color="dodgerblue"><B> Drone Pilot </B></font></p>
         <input align="center" color="dodgerblue" type="submit" value="TAKEOFF" />
     </form>
-        <div id="placeholder"></div>
-            <video id="live" width="640" height="360" autoplay></video>
 
     <form action="/land" method="post">
         <input align="center" face=Geneva type="submit" value="LAND" />
@@ -44,18 +42,21 @@
     </form>
 
     <form action="/avant">
-        <p class="marge"><input id="image" type="image" width="100" height="80" alt="Login" src="/semantic/avant.png" /></p>
+        <p class="marge"><input id="image" type="image" width="60" height="60" alt="Login" src="/semantic/avant.png" /></p>
     </form>
 
     <form>
-        <input id="image" type="image" width="100" height="80" alt="Login" src="/semantic/gauche.png" />
-        <input id="image" type="image" width="100" height="80" alt="Login" src="/semantic/droite.png" />
+        <input id="image" type="image" width="60" height="60" alt="Login" src="/semantic/gauche.png" />
+        <input id="image" type="image" width="60" height="60" alt="Login" src="/semantic/droite.png" />
     </form>
     
     <form action="/arriere">
-        <p class="marge"><input id="image" type="image" width="100" height="80" alt="Login" src="/semantic/arriere.png" /></p>
+        <p class="marge"><input id="image" type="image" width="60" height="60" alt="Login" src="/semantic/arriere.png" /></p>
     </form>
 
+
+    <div id="placeholder"></div>
+    <video controls width="100" height="100" autoplay></video>
 
 
 </body>
